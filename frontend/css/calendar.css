@@ -86,35 +86,112 @@
 }
 
 .month-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.month-week-row {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.month-event-track {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1px;
+  padding: 2px 2px 0;
+  min-height: 0;
+}
+
+.event-bar {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  transition: opacity var(--transition-fast);
+  height: 20px;
+}
+
+.event-bar:hover {
+  opacity: 0.85;
+}
+
+.event-bar-status {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.event-bar-status.confirmed { background: var(--status-confirmed); }
+.event-bar-status.potential { background: var(--status-potential); }
+.event-bar-status.disputed { background: var(--status-disputed); }
+
+.event-bar-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.event-bar.cat-sports { background: rgba(255, 107, 53, 0.2); color: var(--cat-sports); }
+.event-bar.cat-space { background: rgba(123, 104, 238, 0.2); color: var(--cat-space); }
+.event-bar.cat-politics { background: rgba(46, 204, 113, 0.2); color: var(--cat-politics); }
+.event-bar.cat-technology { background: rgba(0, 212, 255, 0.2); color: var(--cat-technology); }
+.event-bar.cat-culture { background: rgba(255, 105, 180, 0.2); color: var(--cat-culture); }
+.event-bar.cat-economics { background: rgba(255, 215, 0, 0.2); color: var(--cat-economics); }
+.event-bar.cat-humanitarian { background: rgba(255, 68, 68, 0.2); color: var(--cat-humanitarian); }
+.event-bar.cat-astronomy { background: rgba(147, 112, 219, 0.2); color: var(--cat-astronomy); }
+
+.event-bar.multi-day {
+  border-radius: 3px;
+  border-left: 3px solid;
+}
+
+.event-bar.multi-day.cat-sports { border-left-color: var(--cat-sports); }
+.event-bar.multi-day.cat-space { border-left-color: var(--cat-space); }
+.event-bar.multi-day.cat-politics { border-left-color: var(--cat-politics); }
+.event-bar.multi-day.cat-technology { border-left-color: var(--cat-technology); }
+.event-bar.multi-day.cat-culture { border-left-color: var(--cat-culture); }
+.event-bar.multi-day.cat-economics { border-left-color: var(--cat-economics); }
+.event-bar.multi-day.cat-humanitarian { border-left-color: var(--cat-humanitarian); }
+.event-bar.multi-day.cat-astronomy { border-left-color: var(--cat-astronomy); }
+
+.month-days-row {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
 }
 
-.month-cell {
-  min-height: 100px;
+.month-day-cell {
+  min-height: 80px;
   border-right: 1px solid var(--border-subtle);
-  border-bottom: 1px solid var(--border-subtle);
   padding: var(--space-xs);
   transition: background var(--transition-fast);
 }
 
-.month-cell:nth-child(7n) {
+.month-day-cell:nth-child(7n) {
   border-right: none;
 }
 
-.month-cell:hover {
+.month-day-cell:hover {
   background: var(--bg-hover);
 }
 
-.month-cell.other-month {
+.month-day-cell.other-month {
   opacity: 0.3;
 }
 
-.month-cell.today {
+.month-day-cell.today {
   background: rgba(0, 212, 255, 0.05);
 }
 
-.month-cell-date {
+.month-day-cell .month-cell-date {
   font-size: 0.8125rem;
   font-weight: 500;
   color: var(--text-secondary);
@@ -122,12 +199,12 @@
   padding: 2px 6px;
 }
 
-.month-cell.today .month-cell-date {
+.month-day-cell.today .month-cell-date {
   color: var(--cat-technology);
   font-weight: 700;
 }
 
-.month-cell-events {
+.month-day-cell .month-cell-events {
   display: flex;
   flex-direction: column;
   gap: 2px;
