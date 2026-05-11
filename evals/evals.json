@@ -1,0 +1,65 @@
+{
+  "skill_name": "big-event-calendar",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "What big events are coming up in the next month?",
+      "expected_output": "List of upcoming events across all categories with dates, categories, and status indicators",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Show me all sports events in 2026",
+      "expected_output": "Filtered list of sports events for 2026 with dates and locations",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "What space launches are scheduled this year?",
+      "expected_output": "List of space/rocket launch events with dates and agencies",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "Add the FIFA World Cup 2026 starting June 12",
+      "expected_output": "Event created confirmation with generated event ID",
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "Scrape the latest technology events",
+      "expected_output": "Scrape results showing new/updated/skipped counts",
+      "files": []
+    },
+    {
+      "id": 6,
+      "prompt": "Export my calendar to iCal format",
+      "expected_output": "Downloaded .ics file with all events",
+      "files": []
+    },
+    {
+      "id": 7,
+      "prompt": "What changed in the event database recently?",
+      "expected_output": "List of recent changes with dates and modification details",
+      "files": []
+    },
+    {
+      "id": 8,
+      "prompt": "Show me events in the United States",
+      "expected_output": "Filtered list of US events across all categories",
+      "files": []
+    },
+    {
+      "id": 9,
+      "prompt": "Start the calendar web server",
+      "expected_output": "Server started confirmation with localhost URL",
+      "files": []
+    },
+    {
+      "id": 10,
+      "prompt": "What elections are happening globally this year?",
+      "expected_output": "List of election/politics events with dates and countries",
+      "files": []
+    }
+  ]
+}

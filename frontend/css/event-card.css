@@ -1,0 +1,100 @@
+.event-card {
+  padding: 3px 6px;
+  border-radius: var(--radius-sm);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border-left: 3px solid;
+  line-height: 1.4;
+}
+
+.event-card:hover {
+  transform: translateX(2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.event-card.cat-sports {
+  background: rgba(255, 107, 53, 0.15);
+  border-color: var(--cat-sports);
+  color: var(--cat-sports);
+}
+
+.event-card.cat-space {
+  background: rgba(123, 104, 238, 0.15);
+  border-color: var(--cat-space);
+  color: var(--cat-space);
+}
+
+.event-card.cat-politics {
+  background: rgba(46, 204, 113, 0.15);
+  border-color: var(--cat-politics);
+  color: var(--cat-politics);
+}
+
+.event-card.cat-technology {
+  background: rgba(0, 212, 255, 0.15);
+  border-color: var(--cat-technology);
+  color: var(--cat-technology);
+}
+
+.event-card.cat-culture {
+  background: rgba(255, 105, 180, 0.15);
+  border-color: var(--cat-culture);
+  color: var(--cat-culture);
+}
+
+.event-card.cat-economics {
+  background: rgba(255, 215, 0, 0.15);
+  border-color: var(--cat-economics);
+  color: var(--cat-economics);
+}
+
+.event-card.cat-humanitarian {
+  background: rgba(255, 68, 68, 0.15);
+  border-color: var(--cat-humanitarian);
+  color: var(--cat-humanitarian);
+}
+
+.event-card.cat-astronomy {
+  background: rgba(147, 112, 219, 0.15);
+  border-color: var(--cat-astronomy);
+  color: var(--cat-astronomy);
+}
+
+.event-card-status {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+
+.event-card-status.confirmed {
+  background: var(--status-confirmed);
+}
+
+.event-card-status.potential {
+  background: var(--status-potential);
+}
+
+.event-card-status.disputed {
+  background: var(--status-disputed);
+}
+
+.event-card-compact {
+  padding: 2px 4px;
+  font-size: 0.625rem;
+  border-left-width: 2px;
+}
+
+.event-card-week {
+  padding: var(--space-xs) var(--space-sm);
+  font-size: 0.75rem;
+  border-radius: var(--radius-sm);
+  margin-bottom: 2px;
+}

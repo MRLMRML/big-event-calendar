@@ -1,0 +1,41 @@
+{
+  "app": {
+    "name": "Big Event Calendar",
+    "version": "1.0.0",
+    "port": 8080,
+    "host": "localhost"
+  },
+  "scheduler": {
+    "interval_hours": 6,
+    "tier1_priority": true,
+    "max_concurrent": 5,
+    "retry_on_failure": true,
+    "retry_delay_minutes": 30,
+    "quiet_hours": {
+      "enabled": false,
+      "start": "02:00",
+      "end": "06:00"
+    }
+  },
+  "scraper": {
+    "user_agent": "BigEventCalendar/1.0 (github.com/big-event-calendar)",
+    "request_timeout": 30,
+    "max_retries": 3,
+    "delay_between_requests": 2,
+    "confidence_threshold": 0.5,
+    "confirmed_threshold": 0.8,
+    "min_sources_for_confirmation": 3
+  },
+  "data": {
+    "events_file": "data/events.json",
+    "backup_enabled": true,
+    "backup_interval_hours": 24,
+    "max_events": 10000
+  },
+  "logging": {
+    "level": "INFO",
+    "file": "logs/scraper.log",
+    "max_size_mb": 10,
+    "backup_count": 5
+  }
+}

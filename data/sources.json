@@ -1,0 +1,574 @@
+{
+  "sources": {
+    "sports": {
+      "official": [
+        {
+          "id": "src_olympics",
+          "name": "Olympics.com",
+          "url": "https://olympics.com",
+          "tier": 1,
+          "type": "official",
+          "categories": ["sports"],
+          "countries": ["global"],
+          "scraper_type": "web",
+          "reliability_score": 0.99,
+          "active": true
+        },
+        {
+          "id": "src_fifa",
+          "name": "FIFA.com",
+          "url": "https://fifa.com",
+          "tier": 1,
+          "type": "official",
+          "categories": ["sports"],
+          "countries": ["global"],
+          "scraper_type": "web",
+          "reliability_score": 0.99,
+          "active": true
+        },
+        {
+          "id": "src_uefa",
+          "name": "UEFA.com",
+          "url": "https://uefa.com",
+          "tier": 1,
+          "type": "official",
+          "categories": ["sports"],
+          "countries": ["global"],
+          "scraper_type": "web",
+          "reliability_score": 0.98,
+          "active": true
+        },
+        {
+          "id": "src_nba",
+          "name": "NBA.com",
+          "url": "https://nba.com",
+          "tier": 1,
+          "type": "official",
+          "categories": ["sports"],
+          "countries": ["US"],
+          "scraper_type": "web",
+          "reliability_score": 0.98,
+          "active": true
+        },
+        {
+          "id": "src_f1",
+          "name": "Formula1.com",
+          "url": "https://formula1.com",
+          "tier": 1,
+          "type": "official",
+          "categories": ["sports"],
+          "countries": ["global"],
+          "scraper_type": "web",
+          "reliability_score": 0.99,
+          "active": true
+        },
+        {
+          "id": "src_icc",
+          "name": "ICC Cricket",
+          "url": "https://icc-cricket.com",
+          "tier": 1,
+          "type": "official",
+          "categories": ["sports"],
+          "countries": ["global"],
+          "scraper_type": "web",
+          "reliability_score": 0.98,
+          "active": true
+        }
+      ],
+      "journalistic": [
+        {
+          "id": "src_espn",
+          "name": "ESPN",
+          "url": "https://espn.com",
+          "tier": 3,
+          "type": "journalistic",
+          "categories": ["sports"],
+          "countries": ["US"],
+          "scraper_type": "rss",
+          "rss_url": "https://www.espn.com/espn/rss/news",
+          "reliability_score": 0.85,
+          "active": true
+        },
+        {
+          "id": "src_bbc_sport",
+          "name": "BBC Sport",
+          "url": "https://bbc.com/sport",
+          "tier": 3,
+          "type": "journalistic",
+          "categories": ["sports"],
+          "countries": ["GB"],
+          "scraper_type": "rss",
+          "rss_url": "https://feeds.bbci.co.uk/sport/rss.xml",
+          "reliability_score": 0.90,
+          "active": true
+        }
+      ]
+    },
+    "space": {
+      "official": [
+        {
+          "id": "src_nasa",
+          "name": "NASA",
+          "url": "https://nasa.gov",
+          "tier": 1,
+          "type": "official",
+          "categories": ["space", "astronomy"],
+          "countries": ["US"],
+          "scraper_type": "rss",
+          "rss_url": "https://www.nasa.gov/news-release/feed/",
+          "reliability_score": 0.99,
+          "active": true
+        },
+        {
+          "id": "src_spacex",
+          "name": "SpaceX",
+          "url": "https://spacex.com",
+          "tier": 1,
+          "type": "official",
+          "categories": ["space"],
+          "countries": ["US"],
+          "scraper_type": "web",
+          "reliability_score": 0.98,
+          "active": true
+        },
+        {
+          "id": "src_esa",
+          "name": "European Space Agency",
+          "url": "https://esa.int",
+          "tier": 1,
+          "type": "official",
+          "categories": ["space"],
+          "countries": ["FR", "DE"],
+          "scraper_type": "rss",
+          "rss_url": "https://www.esa.int/rssfeed/Our_Activities/Space_Transportation",
+          "reliability_score": 0.99,
+          "active": true
+        },
+        {
+          "id": "src_roscosmos",
+          "name": "Roscosmos",
+          "url": "https://roscosmos.ru",
+          "tier": 1,
+          "type": "official",
+          "categories": ["space"],
+          "countries": ["RU"],
+          "scraper_type": "web",
+          "reliability_score": 0.97,
+          "active": true
+        },
+        {
+          "id": "src_isro",
+          "name": "ISRO",
+          "url": "https://isro.gov.in",
+          "tier": 1,
+          "type": "official",
+          "categories": ["space"],
+          "countries": ["IN"],
+          "scraper_type": "web",
+          "reliability_score": 0.97,
+          "active": true
+        },
+        {
+          "id": "src_jaxa",
+          "name": "JAXA",
+          "url": "https://jaxa.jp",
+          "tier": 1,
+          "type": "official",
+          "categories": ["space"],
+          "countries": ["JP"],
+          "scraper_type": "web",
+          "reliability_score": 0.97,
+          "active": true
+        }
+      ],
+      "journalistic": [
+        {
+          "id": "src_space_com",
+          "name": "Space.com",
+          "url": "https://space.com",
+          "tier": 3,
+          "type": "journalistic",
+          "categories": ["space", "astronomy"],
+          "countries": ["US"],
+          "scraper_type": "rss",
+          "rss_url": "https://www.space.com/feeds/all",
+          "reliability_score": 0.85,
+          "active": true
+        }
+      ]
+    },
+    "politics": {
+      "official": [
+        {
+          "id": "src_un",
+          "name": "United Nations",
+          "url": "https://un.org",
+          "tier": 1,
+          "type": "official",
+          "categories": ["politics", "humanitarian"],
+          "countries": ["global"],
+          "scraper_type": "rss",
+          "rss_url": "https://news.un.org/feed/subscribe/en/news/all/rss.xml",
+          "reliability_score": 0.99,
+          "active": true
+        },
+        {
+          "id": "src_whitehouse",
+          "name": "The White House",
+          "url": "https://whitehouse.gov",
+          "tier": 1,
+          "type": "official",
+          "categories": ["politics"],
+          "countries": ["US"],
+          "scraper_type": "rss",
+          "rss_url": "https://www.whitehouse.gov/feed/",
+          "reliability_score": 0.99,
+          "active": true
+        },
+        {
+          "id": "src_nato",
+          "name": "NATO",
+          "url": "https://nato.int",
+          "tier": 1,
+          "type": "official",
+          "categories": ["politics"],
+          "countries": ["global"],
+          "scraper_type": "rss",
+          "rss_url": "https://www.nato.int/rss/rss.xml",
+          "reliability_score": 0.98,
+          "active": true
+        },
+        {
+          "id": "src_eu_council",
+          "name": "European Council",
+          "url": "https://consilium.europa.eu",
+          "tier": 1,
+          "type": "official",
+          "categories": ["politics"],
+          "countries": ["FR", "DE", "IT"],
+          "scraper_type": "rss",
+          "rss_url": "https://www.consilium.europa.eu/en/rss/",
+          "reliability_score": 0.98,
+          "active": true
+        }
+      ],
+      "journalistic": [
+        {
+          "id": "src_reuters_politics",
+          "name": "Reuters Politics",
+          "url": "https://reuters.com/politics",
+          "tier": 3,
+          "type": "journalistic",
+          "categories": ["politics"],
+          "countries": ["global"],
+          "scraper_type": "rss",
+          "rss_url": "https://www.reutersagency.com/feed/",
+          "reliability_score": 0.92,
+          "active": true
+        },
+        {
+          "id": "src_ap_politics",
+          "name": "AP Politics",
+          "url": "https://apnews.com/politics",
+          "tier": 3,
+          "type": "journalistic",
+          "categories": ["politics"],
+          "countries": ["US"],
+          "scraper_type": "rss",
+          "rss_url": "https://rsshub.app/apnews/topics/politics",
+          "reliability_score": 0.92,
+          "active": true
+        }
+      ]
+    },
+    "technology": {
+      "official": [
+        {
+          "id": "src_apple",
+          "name": "Apple Events",
+          "url": "https://apple.com/apple-events",
+          "tier": 1,
+          "type": "official",
+          "categories": ["technology"],
+          "countries": ["US"],
+          "scraper_type": "web",
+          "reliability_score": 0.99,
+          "active": true
+        },
+        {
+          "id": "src_google_io",
+          "name": "Google I/O",
+          "url": "https://io.google",
+          "tier": 1,
+          "type": "official",
+          "categories": ["technology"],
+          "countries": ["US"],
+          "scraper_type": "web",
+          "reliability_score": 0.99,
+          "active": true
+        },
+        {
+          "id": "src_ces",
+          "name": "CES",
+          "url": "https://ces.tech",
+          "tier": 1,
+          "type": "official",
+          "categories": ["technology"],
+          "countries": ["US"],
+          "scraper_type": "web",
+          "reliability_score": 0.98,
+          "active": true
+        },
+        {
+          "id": "src_mwc",
+          "name": "Mobile World Congress",
+          "url": "https://mwcbarcelona.com",
+          "tier": 1,
+          "type": "official",
+          "categories": ["technology"],
+          "countries": ["IT"],
+          "scraper_type": "web",
+          "reliability_score": 0.98,
+          "active": true
+        }
+      ],
+      "journalistic": [
+        {
+          "id": "src_techcrunch",
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com",
+          "tier": 3,
+          "type": "journalistic",
+          "categories": ["technology"],
+          "countries": ["US"],
+          "scraper_type": "rss",
+          "rss_url": "https://techcrunch.com/feed/",
+          "reliability_score": 0.85,
+          "active": true
+        }
+      ]
+    },
+    "culture": {
+      "official": [
+        {
+          "id": "src_oscars",
+          "name": "Academy Awards",
+          "url": "https://oscars.org",
+          "tier": 1,
+          "type": "official",
+          "categories": ["culture"],
+          "countries": ["US"],
+          "scraper_type": "web",
+          "reliability_score": 0.99,
+          "active": true
+        },
+        {
+          "id": "src_cannes",
+          "name": "Cannes Film Festival",
+          "url": "https://festival-cannes.com",
+          "tier": 1,
+          "type": "official",
+          "categories": ["culture"],
+          "countries": ["FR"],
+          "scraper_type": "web",
+          "reliability_score": 0.99,
+          "active": true
+        },
+        {
+          "id": "src_nobel",
+          "name": "Nobel Prize",
+          "url": "https://nobelprize.org",
+          "tier": 1,
+          "type": "official",
+          "categories": ["culture"],
+          "countries": ["global"],
+          "scraper_type": "web",
+          "reliability_score": 0.99,
+          "active": true
+        },
+        {
+          "id": "src_grammy",
+          "name": "Grammy Awards",
+          "url": "https://grammy.com",
+          "tier": 1,
+          "type": "official",
+          "categories": ["culture"],
+          "countries": ["US"],
+          "scraper_type": "web",
+          "reliability_score": 0.98,
+          "active": true
+        }
+      ],
+      "journalistic": [
+        {
+          "id": "src_variety",
+          "name": "Variety",
+          "url": "https://variety.com",
+          "tier": 3,
+          "type": "journalistic",
+          "categories": ["culture"],
+          "countries": ["US"],
+          "scraper_type": "rss",
+          "rss_url": "https://variety.com/feed/",
+          "reliability_score": 0.85,
+          "active": true
+        }
+      ]
+    },
+    "economics": {
+      "official": [
+        {
+          "id": "src_fed",
+          "name": "Federal Reserve",
+          "url": "https://federalreserve.gov",
+          "tier": 1,
+          "type": "official",
+          "categories": ["economics"],
+          "countries": ["US"],
+          "scraper_type": "rss",
+          "rss_url": "https://www.federalreserve.gov/feeds/press_all.xml",
+          "reliability_score": 0.99,
+          "active": true
+        },
+        {
+          "id": "src_ecb",
+          "name": "European Central Bank",
+          "url": "https://ecb.europa.eu",
+          "tier": 1,
+          "type": "official",
+          "categories": ["economics"],
+          "countries": ["FR", "DE"],
+          "scraper_type": "rss",
+          "rss_url": "https://www.ecb.europa.eu/rss/press.html",
+          "reliability_score": 0.99,
+          "active": true
+        },
+        {
+          "id": "src_wef",
+          "name": "World Economic Forum",
+          "url": "https://weforum.org",
+          "tier": 1,
+          "type": "official",
+          "categories": ["economics", "politics"],
+          "countries": ["global"],
+          "scraper_type": "rss",
+          "rss_url": "https://www.weforum.org/rss",
+          "reliability_score": 0.97,
+          "active": true
+        },
+        {
+          "id": "src_boj",
+          "name": "Bank of Japan",
+          "url": "https://boj.or.jp",
+          "tier": 1,
+          "type": "official",
+          "categories": ["economics"],
+          "countries": ["JP"],
+          "scraper_type": "web",
+          "reliability_score": 0.99,
+          "active": true
+        }
+      ],
+      "journalistic": [
+        {
+          "id": "src_bloomberg",
+          "name": "Bloomberg",
+          "url": "https://bloomberg.com",
+          "tier": 3,
+          "type": "journalistic",
+          "categories": ["economics"],
+          "countries": ["US"],
+          "scraper_type": "rss",
+          "rss_url": "https://feeds.bloomberg.com/markets/news.rss",
+          "reliability_score": 0.90,
+          "active": true
+        }
+      ]
+    },
+    "humanitarian": {
+      "official": [
+        {
+          "id": "src_who",
+          "name": "World Health Organization",
+          "url": "https://who.int",
+          "tier": 1,
+          "type": "official",
+          "categories": ["humanitarian"],
+          "countries": ["global"],
+          "scraper_type": "rss",
+          "rss_url": "https://www.who.int/rss-feeds/news-english.xml",
+          "reliability_score": 0.99,
+          "active": true
+        },
+        {
+          "id": "src_unicef",
+          "name": "UNICEF",
+          "url": "https://unicef.org",
+          "tier": 1,
+          "type": "official",
+          "categories": ["humanitarian"],
+          "countries": ["global"],
+          "scraper_type": "rss",
+          "rss_url": "https://www.unicef.org/rss.xml",
+          "reliability_score": 0.98,
+          "active": true
+        },
+        {
+          "id": "src_redcross",
+          "name": "International Red Cross",
+          "url": "https://icrc.org",
+          "tier": 1,
+          "type": "official",
+          "categories": ["humanitarian"],
+          "countries": ["global"],
+          "scraper_type": "rss",
+          "rss_url": "https://www.icrc.org/en/rss",
+          "reliability_score": 0.98,
+          "active": true
+        }
+      ],
+      "journalistic": []
+    },
+    "astronomy": {
+      "official": [
+        {
+          "id": "src_imo",
+          "name": "International Meteor Organization",
+          "url": "https://imo.net",
+          "tier": 1,
+          "type": "official",
+          "categories": ["astronomy"],
+          "countries": ["global"],
+          "scraper_type": "web",
+          "reliability_score": 0.95,
+          "active": true
+        },
+        {
+          "id": "src_timeanddate",
+          "name": "Time and Date",
+          "url": "https://timeanddate.com",
+          "tier": 1,
+          "type": "official",
+          "categories": ["astronomy"],
+          "countries": ["global"],
+          "scraper_type": "web",
+          "reliability_score": 0.95,
+          "active": true
+        },
+        {
+          "id": "src_webb",
+          "name": "James Webb Space Telescope",
+          "url": "https://webbtelescope.org",
+          "tier": 1,
+          "type": "official",
+          "categories": ["astronomy", "space"],
+          "countries": ["US"],
+          "scraper_type": "web",
+          "reliability_score": 0.99,
+          "active": true
+        }
+      ],
+      "journalistic": []
+    }
+  }
+}

@@ -1,0 +1,482 @@
+{
+  "countries": [
+    {
+      "code": "US",
+      "name": "United States",
+      "name_local": "美国",
+      "region": "north-america",
+      "tier": 1,
+      "scores": {
+        "political": 5,
+        "military": 5,
+        "geopolitical": 5,
+        "economic": 5,
+        "weighted": 5.0
+      },
+      "scrape_frequency_hours": 6,
+      "primary_language": "en",
+      "time_zones": ["America/New_York", "America/Chicago", "America/Denver", "America/Los_Angeles"],
+      "flag_emoji": "🇺🇸"
+    },
+    {
+      "code": "CN",
+      "name": "China",
+      "name_local": "中国",
+      "region": "asia",
+      "tier": 1,
+      "scores": {
+        "political": 4,
+        "military": 4,
+        "geopolitical": 5,
+        "economic": 5,
+        "weighted": 4.4
+      },
+      "scrape_frequency_hours": 6,
+      "primary_language": "zh",
+      "time_zones": ["Asia/Shanghai"],
+      "flag_emoji": "🇨🇳"
+    },
+    {
+      "code": "RU",
+      "name": "Russia",
+      "name_local": "Россия",
+      "region": "europe",
+      "tier": 1,
+      "scores": {
+        "political": 5,
+        "military": 5,
+        "geopolitical": 4,
+        "economic": 3,
+        "weighted": 4.3
+      },
+      "scrape_frequency_hours": 6,
+      "primary_language": "ru",
+      "time_zones": ["Europe/Moscow", "Asia/Novosibirsk", "Asia/Vladivostok"],
+      "flag_emoji": "🇷🇺"
+    },
+    {
+      "code": "GB",
+      "name": "United Kingdom",
+      "name_local": "United Kingdom",
+      "region": "europe",
+      "tier": 1,
+      "scores": {
+        "political": 5,
+        "military": 4,
+        "geopolitical": 4,
+        "economic": 4,
+        "weighted": 4.3
+      },
+      "scrape_frequency_hours": 6,
+      "primary_language": "en",
+      "time_zones": ["Europe/London"],
+      "flag_emoji": "🇬🇧"
+    },
+    {
+      "code": "FR",
+      "name": "France",
+      "name_local": "France",
+      "region": "europe",
+      "tier": 1,
+      "scores": {
+        "political": 5,
+        "military": 4,
+        "geopolitical": 4,
+        "economic": 4,
+        "weighted": 4.3
+      },
+      "scrape_frequency_hours": 6,
+      "primary_language": "fr",
+      "time_zones": ["Europe/Paris"],
+      "flag_emoji": "🇫🇷"
+    },
+    {
+      "code": "DE",
+      "name": "Germany",
+      "name_local": "Deutschland",
+      "region": "europe",
+      "tier": 1,
+      "scores": {
+        "political": 3,
+        "military": 2,
+        "geopolitical": 4,
+        "economic": 5,
+        "weighted": 3.4
+      },
+      "scrape_frequency_hours": 6,
+      "primary_language": "de",
+      "time_zones": ["Europe/Berlin"],
+      "flag_emoji": "🇩🇪"
+    },
+    {
+      "code": "IN",
+      "name": "India",
+      "name_local": "भारत",
+      "region": "asia",
+      "tier": 2,
+      "scores": {
+        "political": 3,
+        "military": 4,
+        "geopolitical": 4,
+        "economic": 4,
+        "weighted": 3.7
+      },
+      "scrape_frequency_hours": 6,
+      "primary_language": "en",
+      "time_zones": ["Asia/Kolkata"],
+      "flag_emoji": "🇮🇳"
+    },
+    {
+      "code": "JP",
+      "name": "Japan",
+      "name_local": "日本",
+      "region": "asia",
+      "tier": 2,
+      "scores": {
+        "political": 3,
+        "military": 2,
+        "geopolitical": 4,
+        "economic": 5,
+        "weighted": 3.35
+      },
+      "scrape_frequency_hours": 6,
+      "primary_language": "ja",
+      "time_zones": ["Asia/Tokyo"],
+      "flag_emoji": "🇯🇵"
+    },
+    {
+      "code": "IL",
+      "name": "Israel",
+      "name_local": "ישראל",
+      "region": "middle-east",
+      "tier": 2,
+      "scores": {
+        "political": 3,
+        "military": 4,
+        "geopolitical": 4,
+        "economic": 3,
+        "weighted": 3.5
+      },
+      "scrape_frequency_hours": 6,
+      "primary_language": "he",
+      "time_zones": ["Asia/Jerusalem"],
+      "flag_emoji": "🇮🇱"
+    },
+    {
+      "code": "SA",
+      "name": "Saudi Arabia",
+      "name_local": "المملكة العربية السعودية",
+      "region": "middle-east",
+      "tier": 2,
+      "scores": {
+        "political": 3,
+        "military": 2,
+        "geopolitical": 5,
+        "economic": 4,
+        "weighted": 3.4
+      },
+      "scrape_frequency_hours": 6,
+      "primary_language": "ar",
+      "time_zones": ["Asia/Riyadh"],
+      "flag_emoji": "🇸🇦"
+    },
+    {
+      "code": "TR",
+      "name": "Turkey",
+      "name_local": "Türkiye",
+      "region": "europe",
+      "tier": 2,
+      "scores": {
+        "political": 3,
+        "military": 3,
+        "geopolitical": 4,
+        "economic": 3,
+        "weighted": 3.3
+      },
+      "scrape_frequency_hours": 6,
+      "primary_language": "tr",
+      "time_zones": ["Europe/Istanbul"],
+      "flag_emoji": "🇹🇷"
+    },
+    {
+      "code": "BR",
+      "name": "Brazil",
+      "name_local": "Brasil",
+      "region": "south-america",
+      "tier": 2,
+      "scores": {
+        "political": 2,
+        "military": 2,
+        "geopolitical": 3,
+        "economic": 4,
+        "weighted": 2.65
+      },
+      "scrape_frequency_hours": 6,
+      "primary_language": "pt",
+      "time_zones": ["America/Sao_Paulo"],
+      "flag_emoji": "🇧🇷"
+    },
+    {
+      "code": "KR",
+      "name": "South Korea",
+      "name_local": "대한민국",
+      "region": "asia",
+      "tier": 2,
+      "scores": {
+        "political": 2,
+        "military": 3,
+        "geopolitical": 3,
+        "economic": 4,
+        "weighted": 2.9
+      },
+      "scrape_frequency_hours": 6,
+      "primary_language": "ko",
+      "time_zones": ["Asia/Seoul"],
+      "flag_emoji": "🇰🇷"
+    },
+    {
+      "code": "AU",
+      "name": "Australia",
+      "name_local": "Australia",
+      "region": "oceania",
+      "tier": 2,
+      "scores": {
+        "political": 2,
+        "military": 2,
+        "geopolitical": 3,
+        "economic": 4,
+        "weighted": 2.65
+      },
+      "scrape_frequency_hours": 6,
+      "primary_language": "en",
+      "time_zones": ["Australia/Sydney", "Australia/Perth"],
+      "flag_emoji": "🇦🇺"
+    },
+    {
+      "code": "CA",
+      "name": "Canada",
+      "name_local": "Canada",
+      "region": "north-america",
+      "tier": 2,
+      "scores": {
+        "political": 2,
+        "military": 2,
+        "geopolitical": 3,
+        "economic": 4,
+        "weighted": 2.65
+      },
+      "scrape_frequency_hours": 6,
+      "primary_language": "en",
+      "time_zones": ["America/Toronto", "America/Vancouver"],
+      "flag_emoji": "🇨🇦"
+    },
+    {
+      "code": "IT",
+      "name": "Italy",
+      "name_local": "Italia",
+      "region": "europe",
+      "tier": 2,
+      "scores": {
+        "political": 2,
+        "military": 2,
+        "geopolitical": 3,
+        "economic": 4,
+        "weighted": 2.65
+      },
+      "scrape_frequency_hours": 6,
+      "primary_language": "it",
+      "time_zones": ["Europe/Rome"],
+      "flag_emoji": "🇮🇹"
+    },
+    {
+      "code": "PK",
+      "name": "Pakistan",
+      "name_local": "پاکستان",
+      "region": "asia",
+      "tier": 3,
+      "scores": {
+        "political": 2,
+        "military": 4,
+        "geopolitical": 3,
+        "economic": 2,
+        "weighted": 2.75
+      },
+      "scrape_frequency_hours": 12,
+      "primary_language": "en",
+      "time_zones": ["Asia/Karachi"],
+      "flag_emoji": "🇵🇰"
+    },
+    {
+      "code": "ID",
+      "name": "Indonesia",
+      "name_local": "Indonesia",
+      "region": "asia",
+      "tier": 3,
+      "scores": {
+        "political": 2,
+        "military": 2,
+        "geopolitical": 3,
+        "economic": 3,
+        "weighted": 2.45
+      },
+      "scrape_frequency_hours": 12,
+      "primary_language": "id",
+      "time_zones": ["Asia/Jakarta", "Asia/Makassar", "Asia/Jayapura"],
+      "flag_emoji": "🇮🇩"
+    },
+    {
+      "code": "MX",
+      "name": "Mexico",
+      "name_local": "México",
+      "region": "north-america",
+      "tier": 3,
+      "scores": {
+        "political": 2,
+        "military": 2,
+        "geopolitical": 3,
+        "economic": 3,
+        "weighted": 2.45
+      },
+      "scrape_frequency_hours": 12,
+      "primary_language": "es",
+      "time_zones": ["America/Mexico_City"],
+      "flag_emoji": "🇲🇽"
+    },
+    {
+      "code": "NG",
+      "name": "Nigeria",
+      "name_local": "Nigeria",
+      "region": "africa",
+      "tier": 3,
+      "scores": {
+        "political": 2,
+        "military": 2,
+        "geopolitical": 3,
+        "economic": 3,
+        "weighted": 2.45
+      },
+      "scrape_frequency_hours": 12,
+      "primary_language": "en",
+      "time_zones": ["Africa/Lagos"],
+      "flag_emoji": "🇳🇬"
+    },
+    {
+      "code": "EG",
+      "name": "Egypt",
+      "name_local": "مصر",
+      "region": "africa",
+      "tier": 3,
+      "scores": {
+        "political": 2,
+        "military": 3,
+        "geopolitical": 3,
+        "economic": 2,
+        "weighted": 2.55
+      },
+      "scrape_frequency_hours": 12,
+      "primary_language": "ar",
+      "time_zones": ["Africa/Cairo"],
+      "flag_emoji": "🇪🇬"
+    },
+    {
+      "code": "AE",
+      "name": "United Arab Emirates",
+      "name_local": "الإمارات العربية المتحدة",
+      "region": "middle-east",
+      "tier": 3,
+      "scores": {
+        "political": 2,
+        "military": 2,
+        "geopolitical": 3,
+        "economic": 3,
+        "weighted": 2.45
+      },
+      "scrape_frequency_hours": 12,
+      "primary_language": "ar",
+      "time_zones": ["Asia/Dubai"],
+      "flag_emoji": "🇦🇪"
+    },
+    {
+      "code": "SG",
+      "name": "Singapore",
+      "name_local": "Singapore",
+      "region": "asia",
+      "tier": 3,
+      "scores": {
+        "political": 2,
+        "military": 2,
+        "geopolitical": 3,
+        "economic": 3,
+        "weighted": 2.45
+      },
+      "scrape_frequency_hours": 12,
+      "primary_language": "en",
+      "time_zones": ["Asia/Singapore"],
+      "flag_emoji": "🇸🇬"
+    },
+    {
+      "code": "PL",
+      "name": "Poland",
+      "name_local": "Polska",
+      "region": "europe",
+      "tier": 3,
+      "scores": {
+        "political": 2,
+        "military": 2,
+        "geopolitical": 3,
+        "economic": 3,
+        "weighted": 2.45
+      },
+      "scrape_frequency_hours": 12,
+      "primary_language": "pl",
+      "time_zones": ["Europe/Warsaw"],
+      "flag_emoji": "🇵🇱"
+    },
+    {
+      "code": "UA",
+      "name": "Ukraine",
+      "name_local": "Україна",
+      "region": "europe",
+      "tier": 3,
+      "scores": {
+        "political": 2,
+        "military": 3,
+        "geopolitical": 4,
+        "economic": 2,
+        "weighted": 2.7
+      },
+      "scrape_frequency_hours": 12,
+      "primary_language": "uk",
+      "time_zones": ["Europe/Kiev"],
+      "flag_emoji": "🇺🇦"
+    },
+    {
+      "code": "IR",
+      "name": "Iran",
+      "name_local": "ایران",
+      "region": "middle-east",
+      "tier": 3,
+      "scores": {
+        "political": 2,
+        "military": 3,
+        "geopolitical": 4,
+        "economic": 2,
+        "weighted": 2.7
+      },
+      "scrape_frequency_hours": 12,
+      "primary_language": "fa",
+      "time_zones": ["Asia/Tehran"],
+      "flag_emoji": "🇮🇷"
+    }
+  ],
+  "regions": [
+    {"id": "global", "name": "Global"},
+    {"id": "north-america", "name": "North America"},
+    {"id": "south-america", "name": "South America"},
+    {"id": "europe", "name": "Europe"},
+    {"id": "asia", "name": "Asia"},
+    {"id": "middle-east", "name": "Middle East"},
+    {"id": "africa", "name": "Africa"},
+    {"id": "oceania", "name": "Oceania"}
+  ]
+}
