@@ -11,19 +11,19 @@ const DataLoader = {
     }
 
     try {
-      const response = await fetch("/api/events");
-      if (!response.ok) throw new Error("API not available");
+      const response = await fetch("data/events.json");
       const data = await response.json();
-      this.cache = data;
-      this.isStatic = false;
-    } catch (err) {
+      this.cache = { events: data.events || [], total: (data.events || []).length, metadata: data.metadata || {} };
+      this.isStatic = true;
+    } catch (err2) {
       try {
-        const response = await fetch("/data/events.json");
+        const response = await fetch("/api/events");
+        if (!response.ok) throw new Error("API not available");
         const data = await response.json();
-        this.cache = { events: data.events || [], total: (data.events || []).length, metadata: data.metadata || {} };
-        this.isStatic = true;
-      } catch (err2) {
-        console.error("Failed to load events:", err2);
+        this.cache = data;
+        this.isStatic = false;
+      } catch (err) {
+        console.error("Failed to load events:", err);
         return { events: [], total: 0 };
       }
     }
