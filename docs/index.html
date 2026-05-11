@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Big Event Calendar</title>
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/variables.css">
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/calendar.css">
+  <link rel="stylesheet" href="/css/event-card.css">
+  <link rel="stylesheet" href="/css/filters.css">
+  <link rel="stylesheet" href="/css/detail-panel.css">
+  <link rel="stylesheet" href="/css/animations.css">
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <div class="header-left">
+        <div class="logo">
+          <svg class="logo-icon" viewBox="0 0 28 28" fill="none">
+            <rect x="2" y="4" width="24" height="22" rx="3" stroke="#00D4FF" stroke-width="2"/>
+            <path d="M2 10h24" stroke="#00D4FF" stroke-width="2"/>
+            <path d="M9 2v4M19 2v4" stroke="#00D4FF" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="9" cy="16" r="2" fill="#FF6B35"/>
+            <circle cx="14" cy="16" r="2" fill="#2ECC71"/>
+            <circle cx="19" cy="16" r="2" fill="#7B68EE"/>
+            <circle cx="9" cy="21" r="2" fill="#FFD700"/>
+            <circle cx="14" cy="21" r="2" fill="#FF69B4"/>
+          </svg>
+          <span>Big Event Calendar</span>
+        </div>
+      </div>
+
+      <div class="header-center">
+        <div class="search-box">
+          <svg class="search-icon" viewBox="0 0 16 16" fill="none">
+            <circle cx="7" cy="7" r="5" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M11 11l3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          <input type="text" id="search-input" class="search-input" placeholder="Search events...">
+        </div>
+      </div>
+
+      <div class="header-right">
+        <button id="btn-today" class="btn btn-ghost">Today</button>
+        <button id="btn-export" class="btn btn-ghost">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M7 1v8M3 6l4 4 4-4M2 12h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Export
+        </button>
+      </div>
+    </header>
+
+    <div class="stats-bar" id="stats-bar">
+      <div class="stat-item">
+        <div class="stat-value">—</div>
+        <div class="stat-label">Total Events</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">—</div>
+        <div class="stat-label">Upcoming</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">—</div>
+        <div class="stat-label">This Month</div>
+      </div>
+    </div>
+
+    <div class="toolbar">
+      <div class="toolbar-top">
+        <div class="nav-controls">
+          <button id="btn-prev" class="btn btn-icon btn-ghost">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M10 4L6 8l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div id="month-label" class="month-label"></div>
+          <button id="btn-next" class="btn btn-icon btn-ghost">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+
+        <div class="view-modes">
+          <button class="view-mode" data-view="year">Year</button>
+          <button class="view-mode active" data-view="month">Month</button>
+          <button class="view-mode" data-view="week">Week</button>
+          <button class="view-mode" data-view="list">List</button>
+        </div>
+      </div>
+
+      <div class="toolbar-bottom" id="filters-container"></div>
+    </div>
+
+    <main class="main-content">
+      <div id="calendar-container"></div>
+    </main>
+  </div>
+
+  <div id="detail-overlay" class="detail-overlay"></div>
+  <div id="detail-panel" class="detail-panel"></div>
+
+  <script src="/js/utils.js"></script>
+  <script src="/js/data-loader.js"></script>
+  <script src="/js/state.js"></script>
+  <script src="/js/event-card.js"></script>
+  <script src="/js/calendar-year.js"></script>
+  <script src="/js/calendar-month.js"></script>
+  <script src="/js/calendar-week.js"></script>
+  <script src="/js/calendar-list.js"></script>
+  <script src="/js/event-detail.js"></script>
+  <script src="/js/filters.js"></script>
+  <script src="/js/search.js"></script>
+  <script src="/js/exporter.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>
