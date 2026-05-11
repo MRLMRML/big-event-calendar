@@ -2,6 +2,8 @@
 
 A global calendar database that tracks confirmed major events across all domains, auto-scrapes news for validation, and provides a beautiful dark-mode calendar frontend.
 
+**Live Demo**: https://mrlmrml.github.io/big-event-calendar/
+
 ## Features
 
 - **8 Event Categories**: Sports, Space & Science, Politics & Diplomacy, Technology, Culture & Entertainment, Economics & Business, Humanitarian & Social, Astronomy & Natural
@@ -16,7 +18,7 @@ A global calendar database that tracks confirmed major events across all domains
 
 ```bash
 # Clone the skill
-git clone https://github.com/yourusername/big-event-calendar.git ~/.opencode/skills/big-event-calendar
+git clone https://github.com/MRLMRML/big-event-calendar.git ~/.opencode/skills/big-event-calendar
 
 # Install dependencies
 cd ~/.opencode/skills/big-event-calendar
