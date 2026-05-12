@@ -10,14 +10,15 @@ const DataLoader = {
       return this._filterCached(params);
     }
 
+    const bustCache = `?v=${Date.now()}`;
     try {
-      const response = await fetch("data/events.json");
+      const response = await fetch(`data/events.json${bustCache}`);
       const data = await response.json();
       this.cache = { events: data.events || [], total: (data.events || []).length, metadata: data.metadata || {} };
       this.isStatic = true;
     } catch (err2) {
       try {
-        const response = await fetch("/api/events");
+        const response = await fetch(`/api/events${bustCache}`);
         if (!response.ok) throw new Error("API not available");
         const data = await response.json();
         this.cache = data;
