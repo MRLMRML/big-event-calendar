@@ -594,7 +594,9 @@
       "id": "evt_021",
       "title": "复活节 Easter",
       "category": "culture",
-      "country": "global",
+      "country": [
+        "US"
+      ],
       "region": "global",
       "scope": "global",
       "start_date": "2026-04-05",
@@ -653,7 +655,9 @@
       "id": "evt_023",
       "title": "劳动节 Labour Day",
       "category": "culture",
-      "country": "CN",
+      "country": [
+        "FR"
+      ],
       "region": "asia",
       "scope": "national",
       "start_date": "2026-05-01",
@@ -716,8 +720,7 @@
       "title": "戛纳电影节 Cannes Film Festival",
       "category": "culture",
       "country": [
-        "FR",
-        "global"
+        "FR"
       ],
       "region": "europe",
       "scope": "global",
