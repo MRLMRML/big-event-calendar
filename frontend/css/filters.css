@@ -12,7 +12,7 @@
 }
 
 .filter-group-label {
-  font-size: 0.6875rem;
+  font-size: 0.8125rem;
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -29,9 +29,9 @@
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  padding: 3px 10px;
+  padding: 4px 12px;
   border-radius: var(--radius-full);
-  font-size: 0.6875rem;
+  font-size: 0.8125rem;
   font-weight: 500;
   cursor: pointer;
   transition: all var(--transition-fast);
@@ -70,11 +70,11 @@
 
 .filter-select {
   appearance: none;
-  padding: 3px 24px 3px 10px;
+  padding: 4px 24px 4px 12px;
   background: var(--bg-tertiary);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-full);
-  font-size: 0.6875rem;
+  font-size: 0.8125rem;
   color: var(--text-secondary);
   cursor: pointer;
   min-width: 80px;
@@ -97,10 +97,10 @@
 }
 
 .filter-clear {
-  font-size: 0.6875rem;
+  font-size: 0.8125rem;
   color: var(--text-muted);
   cursor: pointer;
-  padding: 3px 8px;
+  padding: 4px 10px;
   border-radius: var(--radius-full);
   transition: all var(--transition-fast);
 }
@@ -111,9 +111,9 @@
 }
 
 .status-chip {
-  padding: 3px 10px;
+  padding: 4px 12px;
   border-radius: var(--radius-full);
-  font-size: 0.6875rem;
+  font-size: 0.8125rem;
   font-weight: 600;
   cursor: pointer;
   transition: all var(--transition-fast);

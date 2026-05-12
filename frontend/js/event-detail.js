@@ -131,10 +131,50 @@ const EventDetail = {
             <div class="detail-section-title">Tags</div>
             <div style="display: flex; gap: var(--space-xs); flex-wrap: wrap;">
               ${event.tags.map(t => `
-                <span style="padding: 2px 8px; background: var(--bg-tertiary); border-radius: var(--radius-full); font-size: 0.6875rem; color: var(--text-secondary);">
+                <span style="padding: 3px 10px; background: var(--bg-tertiary); border-radius: var(--radius-full); font-size: 0.8125rem; color: var(--text-secondary);">
                   ${this._escapeHtml(t)}
                 </span>
               `).join("")}
+            </div>
+          </div>
+        ` : ""}
+
+        ${event.predictions ? `
+          <div class="detail-section">
+            <div class="detail-section-title">Predictive Analysis</div>
+            <div class="detail-predictions">
+              <div style="display: flex; align-items: center; gap: var(--space-sm); margin-bottom: var(--space-sm);">
+                <span class="impact-badge ${event.predictions.impact_level || "medium"}">
+                  ${(event.predictions.impact_level || "medium").toUpperCase()} IMPACT
+                </span>
+                ${(event.predictions.affected_sectors || []).length > 0 ? `
+                  <div class="sectors-list">
+                    ${event.predictions.affected_sectors.map(s => `
+                      <span class="sector-tag">${this._escapeHtml(s)}</span>
+                    `).join("")}
+                  </div>
+                ` : ""}
+              </div>
+
+              ${event.predictions.if_happens ? `
+                <div class="prediction-item">
+                  <div class="prediction-icon positive">✓</div>
+                  <div>
+                    <div class="prediction-label">If happens →</div>
+                    <div class="prediction-text">${this._escapeHtml(event.predictions.if_happens)}</div>
+                  </div>
+                </div>
+              ` : ""}
+
+              ${event.predictions.if_not ? `
+                <div class="prediction-item">
+                  <div class="prediction-icon negative">✗</div>
+                  <div>
+                    <div class="prediction-label">If not →</div>
+                    <div class="prediction-text">${this._escapeHtml(event.predictions.if_not)}</div>
+                  </div>
+                </div>
+              ` : ""}
             </div>
           </div>
         ` : ""}

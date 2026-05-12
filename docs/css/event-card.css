@@ -1,7 +1,7 @@
 .event-card {
-  padding: 3px 6px;
+  padding: 4px 8px;
   border-radius: var(--radius-sm);
-  font-size: 0.6875rem;
+  font-size: 0.8125rem;
   font-weight: 500;
   cursor: pointer;
   transition: all var(--transition-fast);
@@ -87,14 +87,14 @@
 }
 
 .event-card-compact {
-  padding: 2px 4px;
-  font-size: 0.625rem;
+  padding: 3px 6px;
+  font-size: 0.75rem;
   border-left-width: 2px;
 }
 
 .event-card-week {
   padding: var(--space-xs) var(--space-sm);
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   border-radius: var(--radius-sm);
   margin-bottom: 2px;
 }
