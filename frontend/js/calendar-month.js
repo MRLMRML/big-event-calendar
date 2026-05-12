@@ -73,7 +73,8 @@ const CalendarMonth = {
       if (weekStart && weekEnd) {
         const weekEvents = allEvents.filter(e => {
           const end = e.end_date || e.start_date;
-          return e.start_date <= weekEnd && end >= weekStart;
+          const isMultiDay = end > e.start_date;
+          return isMultiDay && e.start_date <= weekEnd && end >= weekStart;
         }).sort((a, b) => {
           const aLen = (a.end_date || a.start_date) > a.start_date ? 1 : 0;
           const bLen = (b.end_date || b.start_date) > b.start_date ? 1 : 0;
