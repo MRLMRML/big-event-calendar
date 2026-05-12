@@ -1,18 +1,34 @@
-# Big Event Calendar
+# Big Event Calendar 📅
 
-A global calendar database that tracks confirmed major events across all domains, auto-scrapes news for validation, and provides a beautiful dark-mode calendar frontend.
+A global calendar database that tracks confirmed major events across all domains — sports, space, politics, technology, culture, economics, entertainment, humanitarian, and astronomy. Auto-scrapes news for validation, provides predictive analysis, and presents everything in a beautiful dark-mode calendar frontend.
 
 **Live Demo**: https://mrlmrml.github.io/big-event-calendar/
 
 ## Features
 
-- **8 Event Categories**: Sports, Space & Science, Politics & Diplomacy, Technology, Culture & Entertainment, Economics & Business, Humanitarian & Social, Astronomy & Natural
-- **26 Countries**: Tiered by geopolitical significance (political influence, military power, geopolitical importance, economy)
-- **Auto-Scraping**: Runs every 6 hours, pulling from official sources and cross-validating with journalistic sources
-- **Source Tiering**: Official sources (Tier 1) confirmed immediately, journalistic sources (Tier 3) labeled "potential" until corroborated
-- **Beautiful Frontend**: Dark-mode calendar UI with Year/Month/Week/List views
+- **9 Event Categories**: Sports ⚽, Space 🚀, Politics 🏛️, Technology 💻, Culture 🎭, Economics 💰, Entertainment 🎮, Humanitarian 🕊️, Astronomy 🔭
+- **73+ Events**: Covering major global events with predictive analysis for high-impact events
+- **China-Focused**: 22 Chinese events including traditional festivals, political events, tech conferences, and shopping festivals
+- **Source Validation**: Official sources confirmed immediately, journalistic sources labeled "potential" until corroborated
+- **Predictive Analysis**: High-impact events include scenario analysis; uncertain events include if/then predictions
+- **Multi-View Calendar**: Year, Month, Week, and List views with smooth transitions
+- **Dark Mode**: Elegant dark theme with category-specific color coding
 - **Export**: Export to .ics (iCal), .csv, .json formats
-- **CLI**: Full command-line interface for power users
+- **Mobile Responsive**: Optimized for desktop, tablet, and mobile screens
+
+## Event Categories
+
+| Category | Icon | Color | Examples |
+|----------|------|-------|----------|
+| Sports | ⚽ | Orange | FIFA World Cup, Olympics, Grand Slams |
+| Space | 🚀 | Purple | SpaceX launches, NASA missions |
+| Politics | 🏛️ | Green | G7, NATO, elections, summits |
+| Technology | 💻 | Cyan | CES, WWDC, MWC |
+| Culture | 🎭 | Pink | Oscars, Cannes, festivals |
+| Economics | 💰 | Gold | Davos, Fed decisions |
+| Entertainment | 🎮 | Magenta | E3, Gamescom, esports |
+| Humanitarian | 🕊️ | Red | UN days, health summits |
+| Astronomy | 🔭 | Violet | Eclipses, meteor showers |
 
 ## Quick Start
 
@@ -25,7 +41,7 @@ cd ~/.opencode/skills/big-event-calendar
 pip install -r requirements.txt
 
 # Start the server
-python scripts/serve.py
+python3 scripts/serve.py
 ```
 
 Open http://localhost:8080 in your browser.
@@ -63,42 +79,40 @@ cp -r big-event-calendar ~/.opencode/skills/
 
 ```bash
 # Query events
-python scripts/cli.py list
-python scripts/cli.py list --month 2026-06
-python scripts/cli.py list --category sports
-python scripts/cli.py list --country US
-python scripts/cli.py search "world cup"
+python3 scripts/cli.py list
+python3 scripts/cli.py list --month 2026-06
+python3 scripts/cli.py list --category sports
+python3 scripts/cli.py list --country CN
+python3 scripts/cli.py search "world cup"
 
 # Manage events
-python scripts/cli.py add --title "SpaceX Launch" --date 2026-03-15 --category space
-python scripts/cli.py edit evt_123 --date 2026-03-20
-python scripts/cli.py delete evt_123
+python3 scripts/cli.py add --title "SpaceX Launch" --date 2026-03-15 --category space
+python3 scripts/cli.py edit evt_123 --date 2026-03-20
+python3 scripts/cli.py delete evt_123
 
 # Scraper
-python scripts/cli.py scrape
-python scripts/cli.py scrape --category space
-python scripts/cli.py scrape --country US
+python3 scripts/cli.py scrape
+python3 scripts/cli.py scrape --category space
 
 # Export
-python scripts/cli.py export --format ics
-python scripts/cli.py export --format csv
-python scripts/cli.py export --month 2026-06 --format ics
+python3 scripts/cli.py export --format ics
+python3 scripts/cli.py export --format csv
 
 # Server
-python scripts/cli.py serve
-python scripts/cli.py serve --port 9090
+python3 scripts/cli.py serve
+python3 scripts/cli.py serve --port 9090
 
 # Statistics
-python scripts/cli.py stats
+python3 scripts/cli.py stats
 ```
 
 ### Via Web UI
 
-1. Start the server: `python scripts/serve.py`
+1. Start the server: `python3 scripts/serve.py`
 2. Open http://localhost:8080
 3. Use the toolbar to switch views (Year/Month/Week/List)
 4. Use filters to narrow by category, country, or status
-5. Click any event to see details
+5. Click any event to see details and predictions
 6. Use Export button to download calendar
 
 ## Architecture
@@ -119,7 +133,7 @@ python scripts/cli.py stats
                               ▼
 ┌─────────────────────────────────────────────────────────────────┐
 │  DATA LAYER (events.json)                                        │
-│  Events database with full history and change tracking           │
+│  Events database with predictions and change tracking            │
 └─────────────────────────────────────────────────────────────────┘
                               │
                               ▼
@@ -128,6 +142,16 @@ python scripts/cli.py stats
 │  Year / Month / Week / List views with filters and search        │
 └─────────────────────────────────────────────────────────────────┘
 ```
+
+## Prediction Logic
+
+Events have different prediction types based on their nature:
+
+| Event Type | Prediction Format | Example |
+|------------|-------------------|---------|
+| **Confirmed, High Impact** | `analysis` with multiple scenarios | G7 Summit, US Midterms |
+| **Uncertain Events** | `if_happens` / `if_not` | SpaceX Starship, Artemis III |
+| **Holidays/Fixed Events** | `null` (no prediction needed) | Christmas, Spring Festival |
 
 ## Source Validation
 
@@ -178,6 +202,38 @@ Edit `config.json` to customize:
 }
 ```
 
+## File Structure
+
+```
+big-event-calendar/
+├── SKILL.md                    # Skill definition
+├── README.md                   # This file
+├── config.json                 # Global configuration
+├── requirements.txt            # Python dependencies
+├── data/
+│   ├── events.json            # Event database (73+ events)
+│   ├── categories.json        # Category definitions
+│   ├── countries.json         # Country definitions + tiers
+│   └── sources.json           # Source registry
+├── scripts/
+│   ├── scraper.py             # Scraper orchestrator
+│   ├── validator.py           # Cross-validation engine
+│   ├── scheduler.py           # 6-hour cron scheduler
+│   ├── serve.py               # Local web server
+│   ├── cli.py                 # CLI interface
+│   └── exporter.py            # Export to .ics/.csv/.json
+├── scrapers/
+│   ├── base.py                # Base scraper class
+│   ├── sports.py              # Sports scraper
+│   ├── space.py               # Space scraper
+│   └── ...                    # Other category scrapers
+└── frontend/
+    ├── index.html             # Main page
+    ├── css/                   # Stylesheets
+    ├── js/                    # JavaScript modules
+    └── assets/icons/          # SVG icons
+```
+
 ## Contributing
 
 1. Fork the repository
@@ -189,4 +245,3 @@ Edit `config.json` to customize:
 ## License
 
 MIT License
-# Cache bust Tue May 12 13:01:13 CST 2026
