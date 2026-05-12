@@ -148,6 +148,7 @@
 .event-bar.cat-economics { background: rgba(255, 215, 0, 0.2); color: var(--cat-economics); }
 .event-bar.cat-humanitarian { background: rgba(255, 68, 68, 0.2); color: var(--cat-humanitarian); }
 .event-bar.cat-astronomy { background: rgba(147, 112, 219, 0.2); color: var(--cat-astronomy); }
+.event-bar.cat-entertainment { background: rgba(224, 64, 251, 0.2); color: #E040FB; }
 
 .event-bar.multi-day {
   border-radius: 3px;
@@ -162,6 +163,7 @@
 .event-bar.multi-day.cat-economics { border-left-color: var(--cat-economics); }
 .event-bar.multi-day.cat-humanitarian { border-left-color: var(--cat-humanitarian); }
 .event-bar.multi-day.cat-astronomy { border-left-color: var(--cat-astronomy); }
+.event-bar.multi-day.cat-entertainment { border-left-color: #E040FB; }
 
 .month-days-row {
   display: grid;
@@ -349,19 +351,140 @@
 }
 
 @media (max-width: 768px) {
-  .month-cell {
+  .calendar-year {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: var(--space-sm);
+  }
+
+  .year-month {
+    padding: var(--space-sm);
+  }
+
+  .year-month-header {
+    font-size: 0.75rem;
+  }
+
+  .year-month-day {
+    font-size: 0.5625rem;
+  }
+
+  .month-header-cell {
+    font-size: 0.625rem;
+    padding: var(--space-xs);
+  }
+
+  .event-bar {
+    font-size: 0.5625rem;
+    height: 18px;
+    padding: 1px 4px;
+  }
+
+  .event-bar-title {
+    display: none;
+  }
+
+  .event-bar-status {
+    width: 4px;
+    height: 4px;
+  }
+
+  .month-day-cell {
     min-height: 60px;
+    padding: 2px;
+  }
+
+  .month-day-cell .month-cell-date {
+    font-size: 0.6875rem;
+    padding: 1px 3px;
+  }
+
+  .week-header {
+    grid-template-columns: 40px repeat(7, 1fr);
+  }
+
+  .week-day {
+    grid-template-columns: 40px repeat(7, 1fr);
+    min-height: 200px;
+  }
+
+  .week-header-cell {
+    font-size: 0.5625rem;
+    padding: var(--space-xs);
+  }
+
+  .week-day-label {
+    font-size: 0.5625rem;
+  }
+
+  .calendar-list {
+    overflow-x: auto;
   }
 
   .list-header,
   .list-row {
     grid-template-columns: 80px 1fr 80px;
+    min-width: 300px;
   }
 
   .list-header > :nth-child(4),
   .list-header > :nth-child(5),
   .list-row > :nth-child(4),
   .list-row > :nth-child(5) {
+    display: none;
+  }
+
+  .list-header {
+    font-size: 0.625rem;
+  }
+
+  .list-row {
+    font-size: 0.75rem;
+    padding: var(--space-xs) var(--space-sm);
+  }
+
+  .list-date {
+    font-size: 0.6875rem;
+  }
+
+  .list-category {
+    font-size: 0.625rem;
+  }
+
+  .list-status {
+    font-size: 0.5625rem;
+    padding: 2px 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .calendar-year {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .month-day-cell {
+    min-height: 48px;
+  }
+
+  .event-bar {
+    display: none;
+  }
+
+  .month-cell-events {
+    display: none;
+  }
+
+  .week-header,
+  .week-day {
+    grid-template-columns: 30px repeat(7, 1fr);
+  }
+
+  .list-header,
+  .list-row {
+    grid-template-columns: 70px 1fr;
+  }
+
+  .list-header > :nth-child(3),
+  .list-row > :nth-child(3) {
     display: none;
   }
 }

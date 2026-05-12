@@ -65,7 +65,8 @@ const Utils = {
       culture: "#FF69B4",
       economics: "#FFD700",
       humanitarian: "#FF4444",
-      astronomy: "#9370DB"
+      astronomy: "#9370DB",
+      entertainment: "#E040FB"
     };
     return colors[category] || "#888888";
   },
@@ -79,7 +80,8 @@ const Utils = {
       culture: "Culture",
       economics: "Economics",
       humanitarian: "Humanitarian",
-      astronomy: "Astronomy"
+      astronomy: "Astronomy",
+      entertainment: "Entertainment & Gaming"
     };
     return names[category] || category;
   },

@@ -315,4 +315,67 @@
   .detail-panel {
     width: 100vw;
   }
+
+  .detail-header {
+    padding: var(--space-md);
+  }
+
+  .detail-title {
+    font-size: 1.25rem;
+  }
+
+  .detail-badge {
+    font-size: 0.6875rem;
+    padding: 3px 8px;
+  }
+
+  .detail-body {
+    padding: var(--space-md);
+  }
+
+  .detail-section-title {
+    font-size: 0.6875rem;
+  }
+
+  .detail-dates {
+    font-size: 0.9375rem;
+    flex-direction: column;
+    gap: var(--space-xs);
+    align-items: flex-start;
+  }
+
+  .detail-description {
+    font-size: 0.875rem;
+  }
+
+  .detail-source {
+    font-size: 0.75rem;
+    padding: var(--space-xs) var(--space-sm);
+  }
+
+  .detail-change {
+    font-size: 0.75rem;
+    padding: var(--space-xs);
+  }
+
+  .prediction-text {
+    font-size: 0.8125rem;
+  }
+
+  .sector-tag {
+    font-size: 0.625rem;
+    padding: 1px 6px;
+  }
+
+  .detail-footer {
+    padding: var(--space-md);
+    flex-direction: column;
+  }
+
+  .detail-footer .btn {
+    width: 100%;
+    justify-content: center;
+    font-size: 0.875rem;
+    padding: var(--space-sm) var(--space-md);
+  }
 }
