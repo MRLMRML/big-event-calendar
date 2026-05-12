@@ -1,5 +1,7 @@
 # Big Event Calendar 📅
 
+[![收录于 JerryKing's Trove](https://img.shields.io/badge/收录于-JerryKing's%20Trove-blue)](https://github.com/MRLMRML/JerryKing-s-Trove)
+
 A global calendar database that tracks confirmed major events across all domains — sports, space, politics, technology, culture, economics, entertainment, humanitarian, and astronomy. Auto-scrapes news for validation, provides predictive analysis, and presents everything in a beautiful dark-mode calendar frontend.
 
 **Live Demo**: https://mrlmrml.github.io/big-event-calendar/
