@@ -44,7 +44,7 @@ const CalendarList = {
             <span class="dot" style="background: ${catColor}"></span>
             ${Utils.getCategoryName(event.category)}
           </div>
-          <div class="list-country">${Utils.getCountryFlag(event.country)} ${event.country || "Global"}</div>
+          <div class="list-country">${Utils.getCountryFlags(event.country)}</div>
           <div class="list-status" style="background: ${statusColor}22; color: ${statusColor}; border: 1px solid ${statusColor}44;">
             ${event.status || "unknown"}
           </div>

@@ -116,7 +116,14 @@ const State = {
   getFilteredEvents() {
     return this.events.filter(event => {
       if (!this.filters.categories[event.category]) return false;
-      if (this.filters.country !== "all" && event.country !== this.filters.country) return false;
+      if (this.filters.country !== "all") {
+        const ec = event.country;
+        if (Array.isArray(ec)) {
+          if (!ec.includes(this.filters.country) && !ec.includes("global")) return false;
+        } else {
+          if (ec !== this.filters.country && ec !== "global") return false;
+        }
+      }
       if (this.filters.status !== "all" && event.status !== this.filters.status) return false;
       if (this.filters.search) {
         const q = this.filters.search.toLowerCase();
