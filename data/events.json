@@ -93,7 +93,10 @@
       "id": "evt_004",
       "title": "达沃斯世界经济论坛",
       "category": "economics",
-      "country": "global",
+      "country": [
+        "CH",
+        "global"
+      ],
       "region": "global",
       "scope": "global",
       "start_date": "2026-01-19",
@@ -273,7 +276,10 @@
       "id": "evt_010",
       "title": "全国两会 Two Sessions",
       "category": "politics",
-      "country": "CN",
+      "country": [
+        "CN",
+        "global"
+      ],
       "region": "asia",
       "scope": "national",
       "start_date": "2026-03-05",
@@ -611,7 +617,9 @@
       "id": "evt_022",
       "title": "NPT不扩散核武器条约审议大会",
       "category": "politics",
-      "country": "global",
+      "country": [
+        "global"
+      ],
       "region": "global",
       "scope": "global",
       "start_date": "2026-04-27",
@@ -669,7 +677,10 @@
       "id": "evt_024",
       "title": "SpaceX星舰轨道飞行",
       "category": "space",
-      "country": "US",
+      "country": [
+        "US",
+        "CN"
+      ],
       "region": "north-america",
       "scope": "global",
       "start_date": "2026-05-01",
@@ -704,7 +715,10 @@
       "id": "evt_025",
       "title": "戛纳电影节 Cannes Film Festival",
       "category": "culture",
-      "country": "FR",
+      "country": [
+        "FR",
+        "global"
+      ],
       "region": "europe",
       "scope": "global",
       "start_date": "2026-05-12",
@@ -793,7 +807,11 @@
       "id": "evt_027",
       "title": "欧冠决赛 Champions League Final",
       "category": "sports",
-      "country": "global",
+      "country": [
+        "US",
+        "CA",
+        "MX"
+      ],
       "region": "global",
       "scope": "global",
       "start_date": "2026-05-28",
@@ -851,7 +869,9 @@
       "id": "evt_029",
       "title": "京东618购物节 JD 618 Shopping Festival",
       "category": "economics",
-      "country": "CN",
+      "country": [
+        "CN"
+      ],
       "region": "asia",
       "scope": "national",
       "start_date": "2026-06-01",
@@ -952,7 +972,15 @@
       "id": "evt_032",
       "title": "G7峰会 G7 Summit (Evian)",
       "category": "politics",
-      "country": "FR",
+      "country": [
+        "FR",
+        "US",
+        "GB",
+        "DE",
+        "JP",
+        "IT",
+        "CA"
+      ],
       "region": "europe",
       "scope": "global",
       "start_date": "2026-06-15",
@@ -1207,7 +1235,14 @@
       "id": "evt_041",
       "title": "NATO峰会 NATO Summit (Ankara)",
       "category": "politics",
-      "country": "TR",
+      "country": [
+        "TR",
+        "US",
+        "GB",
+        "DE",
+        "FR",
+        "IT"
+      ],
       "region": "europe",
       "scope": "global",
       "start_date": "2026-07-07",
@@ -1240,7 +1275,10 @@
       "id": "evt_042",
       "title": "AI for Good全球峰会",
       "category": "technology",
-      "country": "global",
+      "country": [
+        "CH",
+        "global"
+      ],
       "region": "global",
       "scope": "global",
       "start_date": "2026-07-07",
@@ -1821,7 +1859,9 @@
       "id": "evt_062",
       "title": "双十一购物节 Singles' Day",
       "category": "economics",
-      "country": "CN",
+      "country": [
+        "CN"
+      ],
       "region": "asia",
       "scope": "national",
       "start_date": "2026-11-01",
@@ -1913,7 +1953,10 @@
       "id": "evt_065",
       "title": "COP31气候峰会 (安塔利亚)",
       "category": "politics",
-      "country": "TR",
+      "country": [
+        "TR",
+        "global"
+      ],
       "region": "europe",
       "scope": "global",
       "start_date": "2026-11-09",
@@ -1947,7 +1990,9 @@
       "id": "evt_066",
       "title": "G20峰会 G20 Summit",
       "category": "politics",
-      "country": "global",
+      "country": [
+        "global"
+      ],
       "region": "global",
       "scope": "global",
       "start_date": "2026-11-22",
