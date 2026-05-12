@@ -26,8 +26,8 @@ const EventDetail = {
 
     const catColor = Utils.getCategoryColor(event.category);
     const statusColor = Utils.getStatusColor(event.status);
-    const flags = Utils.getCountryFlags(event.country);
-    const countryDisplay = Utils.getCountryDisplay(event.country);
+    const flag = Utils.getCountryFlag(event.country);
+    const countryName = Utils.getCountryName(event.country);
 
     this.panel.innerHTML = `
       <div class="detail-header">
@@ -40,9 +40,9 @@ const EventDetail = {
             <span class="detail-badge status" style="color: ${statusColor}; border-color: ${statusColor};">
               ${event.status || "unknown"}
             </span>
-            ${event.country ? `
+            ${event.country && event.country !== "global" ? `
               <span class="detail-badge" style="color: var(--text-secondary); border-color: var(--border-default);">
-                ${flags} ${countryDisplay}
+                ${flag} ${countryName}
               </span>
             ` : ""}
           </div>

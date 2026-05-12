@@ -112,31 +112,9 @@ const Utils = {
       IN: "🇮🇳", JP: "🇯🇵", IL: "🇮🇱", SA: "🇸🇦", TR: "🇹🇷", BR: "🇧🇷",
       KR: "🇰🇷", AU: "🇦🇺", CA: "🇨🇦", IT: "🇮🇹", PK: "🇵🇰", ID: "🇮🇩",
       MX: "🇲🇽", NG: "🇳🇬", EG: "🇪🇬", AE: "🇦🇪", SG: "🇸🇬", PL: "🇵🇱",
-      UA: "🇺🇦", IR: "🇮🇷", SE: "🇸🇪", CH: "🇨🇭", AR: "🇦🇷", ZA: "🇿🇦"
+      UA: "🇺🇦", IR: "🇮🇷"
     };
     return flags[code] || "🏳️";
-  },
-
-  getCountryFlags(countries) {
-    if (!countries) return "🌍";
-    if (typeof countries === "string") return this.getCountryFlag(countries);
-    if (Array.isArray(countries)) {
-      if (countries.includes("global")) return "🌍";
-      return countries.map(c => this.getCountryFlag(c)).join("");
-    }
-    return "🌍";
-  },
-
-  getCountryDisplay(countries) {
-    if (!countries) return "Global";
-    if (typeof countries === "string") {
-      return countries === "global" ? "Global" : this.getCountryName(countries);
-    }
-    if (Array.isArray(countries)) {
-      if (countries.includes("global")) return "Global";
-      return countries.map(c => this.getCountryName(c)).join(", ");
-    }
-    return "Global";
   },
 
   getCountryName(code) {
