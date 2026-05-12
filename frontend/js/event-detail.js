@@ -156,6 +156,16 @@ const EventDetail = {
                 ` : ""}
               </div>
 
+              ${event.predictions.analysis ? `
+                <div class="prediction-item">
+                  <div class="prediction-icon neutral">◆</div>
+                  <div>
+                    <div class="prediction-label">Analysis</div>
+                    <div class="prediction-text">${this._escapeHtml(event.predictions.analysis)}</div>
+                  </div>
+                </div>
+              ` : ""}
+
               ${event.predictions.if_happens ? `
                 <div class="prediction-item">
                   <div class="prediction-icon positive">✓</div>
